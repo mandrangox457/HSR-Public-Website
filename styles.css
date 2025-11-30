@@ -1,0 +1,179 @@
+/* styles.css */
+
+/* --- GLOBAL STYLES --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f9; /* Light background for the whole page */
+    color: #333;
+}
+
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff; /* White background for the content area */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* --- NEW: Horizontal Rule Style --- */
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 86, 179, 0.75), rgba(0, 0, 0, 0));
+    margin: 40px 0;
+}
+
+/* --- HEADER AND TITLE --- */
+header {
+    text-align: center;
+    padding: 30px 0;
+    margin-bottom: 20px;
+    border-bottom: 5px solid #0056b3;
+    background-color: #e6f0ff; /* Light blue background for emphasis */
+    border-radius: 8px 8px 0 0;
+}
+
+h1 {
+    color: #0056b3;
+    font-size: 2.8em;
+    font-weight: 700; /* UPDATED for consistent bolding */
+    margin: 0;
+}
+
+.subtitle {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    margin-top: -10px;
+}
+
+/* --- SECTION HEADINGS --- */
+section {
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    /* Removed dashed border-bottom here because we are using <hr> instead */
+}
+
+h2 {
+    color: #004085;
+    font-size: 1.8em;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+h3 {
+    color: #555;
+    font-size: 1.4em;
+    border-left: 4px solid #0056b3;
+    padding-left: 10px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+/* --- TABLE OF CONTENTS (TOC) STYLES --- */
+#toc {
+    padding: 20px;
+    margin-bottom: 40px;
+    border: 1px solid #cceeff; /* Light blue border */
+    background-color: #f0f8ff; /* Very light blue background */
+    border-radius: 6px;
+}
+
+#toc h2 {
+    color: #0056b3;
+    font-size: 1.5em;
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 5px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+#toc ul {
+    list-style: none; /* Remove default bullet points */
+    padding-left: 0;
+}
+
+#toc li {
+    margin-bottom: 8px;
+}
+
+#toc a {
+    color: #004085;
+    text-decoration: none;
+    font-weight: 500;
+    display: block; /* Make the link fill the line */
+    padding: 3px 0;
+}
+
+#toc a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* --- LISTS AND KEY POINTS --- */
+ul, ol {
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+strong {
+    color: #0056b3;
+    font-weight: 600;
+}
+
+.note {
+    font-style: italic;
+    color: #666;
+    margin-top: 20px;
+    padding: 10px;
+    border-left: 3px solid #ccc;
+}
+
+/* --- TABLE STYLES (Key Personnel) --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 0.95em;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background-color: #f0f8ff; /* Very light blue for column headers */
+    color: #004085;
+    font-weight: 700;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Zebra striping for readability */
+}
+
+/* --- REFERENCES SECTION --- */
+#references p {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    text-indent: -15px; /* Hanging indent for citations */
+}
+
+#references a {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+#references a:hover {
+    text-decoration: underline;
+}
