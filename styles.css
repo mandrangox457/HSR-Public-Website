@@ -228,6 +228,11 @@ section {
     padding: 15px 10px;
 }
 
+#team strong {
+    color: #1d1d1f;
+    font-weight: 600;
+}
+
 .commitments-list {
     list-style: none;
     padding: 0;
