@@ -29,7 +29,6 @@ h1 {
     font-weight: 700;
     letter-spacing: -0.02em;
     text-align: center;
-    margin-bottom: 20px;
     color: #1d1d1f; /* Default H1 color */
 }
 
@@ -131,7 +130,7 @@ section {
     overflow: hidden; 
 }
 
-/* --- NEW FIX: Forces H1 and STRONG inside the dark section to white --- */
+/* NEW FIX: Forces H1 and STRONG inside the dark section to white */
 #hero-product-focus h1,
 #hero-product-focus h1 strong {
     color: #ffffff !important;
@@ -255,6 +254,77 @@ section {
 /* --- SECTION FOR POP: IMPLEMENTATION --- */
 #implementation {
     background-color: #f7f9fc; /* Soft blue tint */
+    position: relative; /* Needed for carousel buttons */
+}
+
+/* --- CAROUSEL STYLING FOR IMPLEMENTATION SECTION --- */
+.carousel-container {
+    width: 100%;
+    overflow: hidden; /* Hides slides that are off-screen */
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.4s ease-in-out; /* Smooth sliding transition */
+}
+
+.roadmap-slide {
+    min-width: 100%; /* Each slide takes up the full container width */
+    box-sizing: border-box;
+    padding: 0 10px; 
+}
+
+.slide-content {
+    background-color: #ffffff; /* White background for the card */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Subtle lift */
+    height: 100%; 
+    text-align: center;
+}
+
+.slide-content h3 {
+    color: #003d7a;
+    font-size: 1.6em;
+    margin-bottom: 10px;
+}
+
+.slide-detail {
+    font-style: italic;
+    color: #6e6e73;
+    margin-top: 15px;
+}
+
+/* --- CAROUSEL BUTTONS (Arrows) --- */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    font-size: 1.2em;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.carousel-button:hover {
+    opacity: 1;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
 }
 
 /* --- LISTS STYLING --- */
