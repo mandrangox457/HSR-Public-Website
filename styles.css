@@ -114,7 +114,9 @@ section {
     padding-top: 100px; /* Extra padding to clear fixed nav */
     padding-bottom: 80px;
     text-align: center;
-    background-color: #f7f9fc; /* Subtle light blue-gray tone */
+    
+    /* --- COLOR FOR POP: DEEP BLUE BACKGROUND --- */
+    background-color: #003d7a; 
     
     /* --- STATIC BACKGROUND IMAGE PROPERTIES (UNCOMMENT TO USE) --- */
     /* background-image: url('header-background.jpg'); */
@@ -128,6 +130,15 @@ section {
     z-index: 1; 
     overflow: hidden; 
 }
+
+/* Change text color inside the dark header to white */
+#hero-product-focus h1,
+#hero-product-focus .hero-subheading,
+#hero-product-focus .stat-item strong,
+#hero-product-focus .stat-item p {
+    color: #ffffff !important; 
+}
+
 
 /* --- VIDEO BACKGROUND STYLES --- */
 #hero-video {
@@ -163,7 +174,7 @@ section {
 .hero-subheading {
     font-size: 1.4em;
     font-weight: 400;
-    color: #555555; /* Darker for better contrast */
+    color: #555555; 
     max-width: 600px;
     margin: 0 auto 40px;
 }
@@ -213,6 +224,11 @@ section {
     margin: 0;
 }
 
+/* --- SECTION FOR POP: BENEFITS --- */
+#product {
+    background-color: #f0f3f5; /* Light gray to stand out from white main background */
+}
+
 /* --- CHUNKING: FEATURE GRID (CSS Grid) --- */
 .feature-grid {
     display: grid;
@@ -229,6 +245,11 @@ section {
 
 .feature-item h3 {
     color: #0071e3;
+}
+
+/* --- SECTION FOR POP: IMPLEMENTATION --- */
+#implementation {
+    background-color: #f7f9fc; /* Soft blue tint */
 }
 
 /* --- LISTS STYLING --- */
