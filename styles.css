@@ -7,7 +7,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #ffffff; /* Clean white background */
-    color: #1d1d1f; /* Near-black color for text */
+    color: #222222; /* Deeper near-black for better contrast */
 }
 
 main {
@@ -57,7 +57,7 @@ p {
 
 strong {
     font-weight: 700;
-    color: #0071e3; /* Apple's signature blue */
+    color: #0060c5; /* Deeper blue accent */
 }
 
 section {
@@ -114,7 +114,7 @@ section {
     padding-top: 100px; /* Extra padding to clear fixed nav */
     padding-bottom: 80px;
     text-align: center;
-    background-color: #f5f5f7; /* Light gray background */
+    background-color: #f7f9fc; /* Subtle light blue-gray tone */
 }
 
 #hero-product-focus h1 {
@@ -126,7 +126,7 @@ section {
 .hero-subheading {
     font-size: 1.4em;
     font-weight: 400;
-    color: #6e6e73;
+    color: #555555; /* Darker for better contrast */
     max-width: 600px;
     margin: 0 auto 40px;
 }
@@ -186,7 +186,7 @@ section {
 
 .feature-item {
     padding: 25px;
-    background-color: #f5f5f7;
+    background-color: #f9f9f9; /* Subtle contrast */
     border-radius: 12px;
 }
 
@@ -203,7 +203,7 @@ section {
 }
 
 .roadmap-list li {
-    background-color: #f5f5f7;
+    background-color: #f9f9f9; /* Subtle contrast */
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 15px;
@@ -249,7 +249,7 @@ section {
 
 /* --- SUPPORT SECTION (Dark background for contrast) --- */
 #support {
-    background-color: #1d1d1f;
+    background-color: #111111; /* Make the black section truly dark */
     color: #fff;
     text-align: center;
     padding: 80px 40px;
@@ -307,6 +307,7 @@ section {
     color: #6e6e73;
 }
 
+
 /* --- MOBILE OPTIMIZATION (Media Queries) --- */
 
 @media (max-width: 768px) {
@@ -341,11 +342,6 @@ section {
     /* Hero Section Adjustments */
     #hero-product-focus {
         padding-top: 60px;
-    }
-    
-    .hero-subheading {
-        font-size: 1.2em;
-        margin-bottom: 30px;
     }
     
     /* Stats Bar (Converts from horizontal to vertical stack) */
