@@ -291,7 +291,8 @@ ol {
 }
 
 #team th {
-    background-color: #e6f0ff;
+    background-color: #003d7a; /* DEEP BLUE from Header */
+    color: #ffffff; /* TEXT to WHITE for contrast */
 }
 
 #team td, #team th {
@@ -543,4 +544,4 @@ ol {
         max-width: 100%;
         height: auto;
     }
-}
+}gi
