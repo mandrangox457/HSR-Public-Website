@@ -115,7 +115,44 @@ section {
     padding-bottom: 80px;
     text-align: center;
     background-color: #f7f9fc; /* Subtle light blue-gray tone */
+    
+    /* --- STATIC BACKGROUND IMAGE PROPERTIES (UNCOMMENT TO USE) --- */
+    /* background-image: url('header-background.jpg'); */
+    /* background-size: cover; */
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+    /* background-blend-mode: overlay; */
+
+    /* Required for positioning content over the video */
+    position: relative; 
+    z-index: 1; 
+    overflow: hidden; 
 }
+
+/* --- VIDEO BACKGROUND STYLES --- */
+#hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Puts the video behind the content */
+    transform: translate(-50%, -50%); /* Centers the video */
+    
+    /* Optional: Darken the video so text is readable */
+    filter: brightness(0.7); 
+}
+
+/* Ensure all text/content layers are above the video layer */
+#hero-product-focus h1, 
+#hero-product-focus p, 
+#hero-product-focus .stats-bar {
+    position: relative; 
+    z-index: 2;
+}
+
 
 #hero-product-focus h1 {
     font-size: 3.5em;
@@ -307,6 +344,70 @@ section {
     color: #6e6e73;
 }
 
+/* --- NEW SITEMAP FOOTER STYLES (Based on Apple's Footer) --- */
+#site-footer {
+    background-color: #f5f5f7; /* Light gray background */
+    padding: 40px 40px 20px 40px; /* Reduced top padding */
+    font-size: 0.9em;
+    color: #6e6e73; /* Subtle light gray text */
+    text-align: left;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+    gap: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #d2d2d7; /* Separator line */
+}
+
+.footer-column h4 {
+    font-size: 0.95em;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #1d1d1f; /* Darker title text */
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column li {
+    margin-bottom: 5px;
+}
+
+.footer-column a {
+    color: #6e6e73;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.2s;
+}
+
+.footer-column a:hover {
+    color: #1d1d1f; /* Darken on hover */
+}
+
+/* --- LEGAL SECTION --- */
+.footer-legal {
+    padding-top: 15px;
+    font-size: 0.75em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-legal p {
+    margin: 0;
+    font-size: 1em;
+}
+
+.legal-links a {
+    color: #6e6e73;
+    text-decoration: none;
+    padding: 0 5px;
+}
 
 /* --- MOBILE OPTIMIZATION (Media Queries) --- */
 
@@ -373,6 +474,22 @@ section {
         overflow-x: auto;
         white-space: nowrap;
         max-width: 100%;
+    }
+    
+    /* Footer Mobile Adjustments */
+    .footer-grid {
+        grid-template-columns: 1fr; /* Stack columns on mobile */
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer-legal {
+        flex-direction: column; /* Stack legal items */
+        text-align: center;
+    }
+
+    .legal-links {
+        margin-top: 10px;
     }
     
     /* Prevent image overflow (if you add images later) */
