@@ -131,7 +131,7 @@ section {
     overflow: hidden; 
 }
 
-/* NEW RULE: Forces H1 and STRONG inside the dark section to white */
+/* --- NEW FIX: Forces H1 and STRONG inside the dark section to white --- */
 #hero-product-focus h1,
 #hero-product-focus h1 strong {
     color: #ffffff !important;
