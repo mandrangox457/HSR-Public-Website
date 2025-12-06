@@ -306,3 +306,82 @@ section {
     font-style: italic;
     color: #6e6e73;
 }
+
+/* --- MOBILE OPTIMIZATION (Media Queries) --- */
+
+@media (max-width: 768px) {
+    /* General Spacing and Typography */
+    main {
+        padding-top: 45px; /* Adjust top padding for smaller fixed header */
+    }
+    
+    h1 {
+        font-size: 2.5em; /* Reduce large headers */
+    }
+    
+    h2 {
+        font-size: 1.8em;
+        margin-bottom: 25px;
+    }
+    
+    section {
+        padding: 40px 20px; /* Reduce horizontal padding */
+    }
+    
+    /* Navigation Adjustments */
+    .nav-content {
+        padding: 5px 20px;
+    }
+    
+    .nav-links a {
+        font-size: 0.75em; /* Smaller menu text */
+        padding: 5px 8px; /* Tighter spacing for links */
+    }
+    
+    /* Hero Section Adjustments */
+    #hero-product-focus {
+        padding-top: 60px;
+    }
+    
+    .hero-subheading {
+        font-size: 1.2em;
+        margin-bottom: 30px;
+    }
+    
+    /* Stats Bar (Converts from horizontal to vertical stack) */
+    .stats-bar {
+        flex-direction: column; /* Stack the stats vertically */
+        gap: 20px;
+        margin-top: 30px;
+    }
+    
+    .stat-item strong {
+        font-size: 2em;
+    }
+
+    /* Feature Grid (Ensures features stack vertically) */
+    .feature-grid {
+        grid-template-columns: 1fr; /* One column on mobile */
+        gap: 20px;
+    }
+    
+    /* Contact Info Grid (Ensures contact info stacks vertically) */
+    .contact-info-grid {
+        flex-direction: column; /* Stack contact methods vertically */
+        gap: 30px;
+    }
+    
+    /* Team Table (Makes the table scroll horizontally if it's too wide) */
+    #team table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        max-width: 100%;
+    }
+    
+    /* Prevent image overflow (if you add images later) */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
