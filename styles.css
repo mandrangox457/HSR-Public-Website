@@ -231,6 +231,17 @@ section {
     color: #0071e3;
 }
 
+/* --- LISTS STYLING --- */
+ul {
+    list-style: none; /* REMOVES BULLET POINTS */
+    padding: 0; /* Aligns list content to the left edge of the container */
+}
+ol {
+    /* Keep default numbering but adjust padding */
+    padding-left: 20px;
+}
+
+
 /* --- IMPLEMENTATION LIST (ROADMAP) --- */
 .roadmap-list {
     list-style-type: none;
@@ -344,7 +355,7 @@ section {
     color: #6e6e73;
 }
 
-/* --- NEW SITEMAP FOOTER STYLES (Based on Apple's Footer) --- */
+/* --- SITEMAP FOOTER STYLES --- */
 #site-footer {
     background-color: #f5f5f7; /* Light gray background */
     padding: 40px 40px 20px 40px; /* Reduced top padding */
@@ -355,10 +366,24 @@ section {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
-    gap: 20px;
+    /* Grid layout for horizontal organization on desktop */
+    grid-template-columns: repeat(12, 1fr); 
+    gap: 20px 40px;
     padding-bottom: 20px;
-    border-bottom: 1px solid #d2d2d7; /* Separator line */
+    border-bottom: 1px solid #d2d2d7; 
+}
+
+/* Define explicit column spans for horizontal layout */
+.footer-column:nth-child(1) {
+    grid-column: span 3;
+}
+
+.footer-column:nth-child(2) {
+    grid-column: span 3;
+}
+
+.footer-column:nth-child(3) {
+    grid-column: 7 / span 4;
 }
 
 .footer-column h4 {
@@ -370,7 +395,7 @@ section {
 }
 
 .footer-column ul {
-    list-style: none;
+    list-style: none; /* Ensure lists in the footer don't have bullets */
     padding: 0;
 }
 
@@ -476,15 +501,15 @@ section {
         max-width: 100%;
     }
     
-    /* Footer Mobile Adjustments */
+    /* Footer Mobile Adjustments (Ensure columns stack and legal items stack) */
     .footer-grid {
-        grid-template-columns: 1fr; /* Stack columns on mobile */
+        grid-template-columns: 1fr; 
         gap: 30px;
         text-align: center;
     }
 
     .footer-legal {
-        flex-direction: column; /* Stack legal items */
+        flex-direction: column; 
         text-align: center;
     }
 
