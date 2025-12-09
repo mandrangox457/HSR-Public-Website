@@ -64,6 +64,16 @@ section {
     box-sizing: border-box;
 }
 
+/* --- NEW IMAGE STYLING --- */
+.content-image {
+    max-width: 100%; /* Makes sure the image never exceeds the container width */
+    height: auto;
+    display: block; /* Allows margin auto to center block elements */
+    margin: 40px auto; 
+    border-radius: 8px; /* Optional: Adds rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
 /* --- FIXED HEADER NAVIGATION (SECTION TABS) --- */
 #header-nav {
     position: fixed;
@@ -271,7 +281,6 @@ section {
 }
 
 .roadmap-slide {
-    /* FIX 1: Ensures exact 100% width for seamless sliding */
     min-width: 100%; 
     box-sizing: border-box;
     padding: 0; 
@@ -284,7 +293,6 @@ section {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     height: 100%; 
     text-align: center;
-    /* FIX 2: Constrains content width and centers the card */
     max-width: 600px;
     margin: 0 auto; 
 }
@@ -465,7 +473,6 @@ ol {
 
 .footer-grid {
     display: grid;
-    /* Grid layout for horizontal organization on desktop */
     grid-template-columns: repeat(12, 1fr); 
     gap: 20px 40px;
     padding-bottom: 20px;
