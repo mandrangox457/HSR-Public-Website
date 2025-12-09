@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Select the necessary elements from the HTML
     const track = document.querySelector('.carousel-track');
+    // Check if the track element exists before proceeding
+    if (!track) return; 
+    
     const slides = Array.from(document.querySelectorAll('.roadmap-slide'));
     const nextButton = document.querySelector('.next');
     const prevButton = document.querySelector('.prev');
@@ -11,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to move the carousel track
     const moveToSlide = (index) => {
         // Calculate the amount to translate (move left) the track.
-        // If the index is 1, it moves -100%. If 2, it moves -200%, etc.
+        // The movement is based on the slides' width (100% of the container)
         const amountToMove = index * 100;
         track.style.transform = `translateX(-${amountToMove}%)`;
     };
@@ -39,8 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // 2. Attach event listeners to the buttons
-    nextButton.addEventListener('click', handleNextClick);
-    prevButton.addEventListener('click', handlePrevClick);
+    if (nextButton) nextButton.addEventListener('click', handleNextClick);
+    if (prevButton) prevButton.addEventListener('click', handlePrevClick);
     
     // (Optional) Implement basic touch/swipe functionality for mobile
     let touchstartX = 0;

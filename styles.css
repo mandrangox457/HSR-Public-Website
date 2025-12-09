@@ -64,15 +64,30 @@ section {
     box-sizing: border-box;
 }
 
-/* --- NEW IMAGE STYLING --- */
+/* --- IMAGE STYLING (For content-image and captions) --- */
+.image-container {
+    margin: 40px auto; /* Groups image and caption together with margin */
+    max-width: 1000px; 
+    text-align: center;
+}
+
 .content-image {
     max-width: 100%; /* Makes sure the image never exceeds the container width */
     height: auto;
     display: block; /* Allows margin auto to center block elements */
-    margin: 40px auto; 
-    border-radius: 8px; /* Optional: Adds rounded corners */
+    margin: 0 auto; /* Center the image within its container */
+    border-radius: 8px; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
+.image-credit {
+    font-size: 0.8em; /* Very small text */
+    color: #999999; /* Light gray color */
+    margin-top: 10px;
+    font-style: italic;
+    display: block; /* Ensure it stays below the image */
+}
+
 
 /* --- FIXED HEADER NAVIGATION (SECTION TABS) --- */
 #header-nav {
@@ -281,7 +296,6 @@ section {
 }
 
 .roadmap-slide {
-    /* FIX 1: Ensures exact 100% width for seamless sliding */
     min-width: 100%; 
     box-sizing: border-box;
     padding: 0; 
@@ -444,7 +458,6 @@ ol {
 .language-selector a {
     color: #0071e3;
     text-decoration: none;
-    font-size: 0.9em;
     padding: 0 10px;
 }
 
