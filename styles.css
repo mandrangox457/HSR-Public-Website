@@ -281,6 +281,7 @@ section {
 }
 
 .roadmap-slide {
+    /* FIX 1: Ensures exact 100% width for seamless sliding */
     min-width: 100%; 
     box-sizing: border-box;
     padding: 0; 
